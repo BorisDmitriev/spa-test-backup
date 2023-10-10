@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 5</title>
+        <style>
+            td { border: 1px solid; }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <button>Calculate new column</button>
+        <script>
+            // ???
+            document.getElementsByTagName('button')[0].addEventListener('click', e => {
+
+                let sum = 0
+
+                for (const tr of document.getElementsByTagName('tr') ) {
+
+                    // summe einzelner td's
+                    for (const td of tr.getElementsByTagName('td')) {
+                        sum += Number(td.innerText)
+                    }
+
+                    const newCell = document.createElement('td')
+                    newCell.innerHTML = sum
+                    tr.append(newCell)
+                    
+                    sum = 0
+                }
+            } )
+        </script>
+    </body>
+
+</html>

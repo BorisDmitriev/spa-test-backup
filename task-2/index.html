@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 2</title>
+    </head>
+
+    <body>
+        <p>
+            <a
+                class="w3r"
+                type="text/html"
+                hreflang="en-us"
+                rel="nofollow"
+                target="_self"
+                href="https://www.google.com/"
+            >
+                Google.com
+            </a>
+            <a href="#" data-description="Ignore this one!" target="_blank"></a>
+        </p>
+
+        <button>Click here to get attributes</button>
+
+        <script>
+            // ???
+            document.getElementsByTagName('button')[0].addEventListener( 'click', e => {
+                showValues()
+            } )
+
+            function showValues() {
+                const firstAnchor = document.querySelector('a')
+                console.log(firstAnchor.href)
+                console.log(firstAnchor.hreflang)
+                console.log(firstAnchor.rel)
+                console.log(firstAnchor.target)
+                console.log(firstAnchor.type)
+            }
+        </script>
+    </body>
+
+</html>

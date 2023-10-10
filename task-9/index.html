@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 9</title>
+</head>
+
+<body> 
+  <p>
+    <!-- 'Hello developer!' -->
+  </p>
+  <script>
+    // ??? 
+    window.addEventListener("load", e => {
+      askUser()
+    });
+
+    function askUser() {
+      const answer = prompt("What's you name?")
+      if (!answer) {
+        askUser()
+      }
+      else {
+        alert(`Hello ${answer}`)
+      }
+    }
+
+  </script>
+</body>
+
+</html>

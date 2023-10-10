@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 8</title>
+    </head>
+
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, corrupti! Similique ratione cum quod labore voluptatem iure iusto sapiente tempore id reiciendis? Aspernatur officia ad ipsa unde saepe distinctio nostrum?</p>
+        <p>The paragraph above is simply <span>gobbledygook</span>! Nonsense!</p>
+        <p>But sometimes, you need nonsense!</p>
+        <script>
+            // ???
+            for (const p of document.getElementsByTagName('p')) {
+                p.addEventListener('mouseover', e => {
+                    if(e.currentTarget.textContent.includes('gobbledygook')){
+                        const span = document.querySelector('p span')
+                        span.style.fontWeight = 'bold'
+                        span.style.color = 'red'
+                    }
+                })
+            }
+           
+        </script>
+    </body>
+
+</html>
